@@ -9,8 +9,8 @@ export default function Header ({ setItemList, setLoading }){
 
         const newItem = {
             done: false,
-            userIde: 'me',
-            item: value,
+            userId: "me",
+            item: value
         }
 
         const response = await fetch("https://much-todo-api-bp.web.app/items", {
@@ -18,7 +18,7 @@ export default function Header ({ setItemList, setLoading }){
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(newItem),
+            body: JSON.stringify(newItem)
         })
         const data = await response.json()
         setItemList(data)
@@ -32,7 +32,8 @@ export default function Header ({ setItemList, setLoading }){
             enterButton="Add"
             size="large"
             onSearch={handleAdd}
-            placeholder="Add New ToDo Item"/>
+            placeholder="Add New ToDo Item"
+            />
         </header>
     )
 }
