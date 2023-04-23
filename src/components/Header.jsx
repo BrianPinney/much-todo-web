@@ -33,6 +33,7 @@ export default function Header ({ setItemList, setLoading }){
             size="large"
             onSearch={handleAdd}
             placeholder="Add New ToDo Item"
+            
             />
         </header>
     )
